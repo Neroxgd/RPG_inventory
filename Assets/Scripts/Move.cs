@@ -14,7 +14,7 @@ public class Move : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(new Vector3(moveVal.x, moveVal.y, 0) * moveSpeed * Time.deltaTime);
+        transform.Translate(new Vector3(moveVal.x, 0, moveVal.y) * moveSpeed * Time.deltaTime);
         Debug.Log(moveVal);
     }
 }
