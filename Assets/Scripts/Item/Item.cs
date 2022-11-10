@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Item : ScriptableObject
 {
-    public string _name = "default" ; 
+    public string _name = "default";
 
     public GameObject _PhysicalRepresentation;
 
