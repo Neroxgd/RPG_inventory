@@ -5,16 +5,17 @@ using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
-    private Vector2 moveVal;
+    [SerializeField] private Rigidbody _rbPlayer;
+    private Vector2 moveVal = Vector2.zero;
     public float moveSpeed;
 
     public void OnMove(InputValue value)
     {
         moveVal = value.Get<Vector2>();
     }
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(new Vector3(moveVal.x, 0, moveVal.y) * moveSpeed * Time.deltaTime);
-        Debug.Log(moveVal);
+        _rbPlayer.velocity = (new Vector3(moveVal.x, _rbPlayer.velocity.y/9.5f, moveVal.y) * moveSpeed);
     }
 }
+
