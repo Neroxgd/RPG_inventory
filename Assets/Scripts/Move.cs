@@ -7,26 +7,25 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rbPlayer;
     private Vector2 moveVal = Vector2.zero;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeed = 10;
     private float currentRotation = 0;
-    private float lerpRotate = 0;
     public void OnMove(InputValue value)
     {
+        //get input values (ZQSD/arrows) to move
         moveVal = value.Get<Vector2>();
     }
-    void Start()
-    {
-        // saveRotation = moveVal;
-    }
+
     void FixedUpdate()
     {
-        _rbPlayer.velocity = (new Vector3(moveVal.x, _rbPlayer.velocity.y / 9.6f, moveVal.y) * moveSpeed);
+        //move in the direction, apply the gravity
+        _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / 9.4f), moveVal.y) * moveSpeed;
+
+        //look the good rotation
         SetRotation();
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, currentRotation, 0), 0.5f);
-        Debug.Log(currentRotation);
-
     }
 
+    //set the good looking rotation
     public void SetRotation()
     {
         if (moveVal == new Vector2(0, 1))
