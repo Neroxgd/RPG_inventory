@@ -9,6 +9,7 @@ public class Move : MonoBehaviour
     private Vector2 moveVal = Vector2.zero;
     [SerializeField] private float moveSpeed = 10;
     private float currentRotation = 0;
+    [SerializeField] private float gravityPower = 9.4f;
     public void OnMove(InputValue value)
     {
         //get input values (ZQSD/arrows) to move
@@ -18,11 +19,17 @@ public class Move : MonoBehaviour
     void FixedUpdate()
     {
         //move in the direction, apply the gravity
-        _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / 9.4f), moveVal.y) * moveSpeed;
+        _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / gravityPower), moveVal.y) * moveSpeed;
 
         //look the good rotation
         SetRotation();
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, currentRotation, 0), 0.5f);
+        Debug.Log(Physics.gravity);
+    }
+
+    void LateUpdate()
+    {
+
     }
 
     //set the good looking rotation
