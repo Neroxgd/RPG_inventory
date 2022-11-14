@@ -27,11 +27,6 @@ public class Move : MonoBehaviour
         Debug.Log(Physics.gravity);
     }
 
-    void LateUpdate()
-    {
-
-    }
-
     //set the good looking rotation
     public void SetRotation()
     {
