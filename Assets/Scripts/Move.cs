@@ -20,7 +20,7 @@ public class Move : MonoBehaviour
     {
         //move in the direction, apply the gravity
         _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / gravityPower), moveVal.y) * moveSpeed;
-
+        
         //look the good rotation
         SetRotation();
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, currentRotation, 0), 0.5f);
