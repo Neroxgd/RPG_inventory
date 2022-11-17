@@ -23,7 +23,7 @@ public class UiInventory : MonoBehaviour
             i++;
         }
 
-        for (; i < 20; i++)
+        for (; i < 12; i++)
         {
             Image image = transform.GetChild(i).GetChild(0).GetComponent<Image>();
             Text text = transform.GetChild(i).GetChild(1).GetComponent<Text>();
@@ -45,7 +45,7 @@ public class UiInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 20; ++i)
+        for (int i = 0; i < 12; ++i)
         {
             Button button = transform.GetChild(i).GetComponent<Button>();
             int x = new int();
@@ -58,6 +58,6 @@ public class UiInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        UpdateInventoryView();
     }
 }
