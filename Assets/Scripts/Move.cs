@@ -7,17 +7,15 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rbPlayer;
     private Vector2 moveVal = Vector2.zero;
-    [SerializeField] private float moveSpeed = 10;
-    private float currentRotation = 0;
-    [SerializeField] private float gravityPower = 9.4f;
+    public float moveSpeed;
+
     public void OnMove(InputValue value)
     {
-        //get input values (ZQSD/arrows) to move
         moveVal = value.Get<Vector2>();
     }
-
     void FixedUpdate()
     {
+<<<<<<< HEAD
         //move in the direction, apply the gravity
         _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / gravityPower), moveVal.y) * moveSpeed;
         
@@ -51,6 +49,9 @@ public class Move : MonoBehaviour
             currentRotation = 270;
         else if (moveVal == new Vector2(-1, 1).normalized)
             currentRotation = 315;
+=======
+        _rbPlayer.velocity = (new Vector3(moveVal.x, _rbPlayer.velocity.y/9.5f, moveVal.y) * moveSpeed);
+>>>>>>> parent of 5d3a076 (grgr)
     }
 }
 
