@@ -11,7 +11,6 @@ public class Move : MonoBehaviour
     [SerializeField] private float gravityPower = 9.4f;
     private Vector2 moveVal;
 
-    //true = player, false = IA
     public void SetMove(Vector2 move)
     {
         moveVal=move;
