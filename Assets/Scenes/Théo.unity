@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemInstance:
     _item: {fileID: 11400000, guid: d950a628c3363aa409e1b65a423fc408, type: 2}
-    _quantity: 2
+    _quantity: 1
   angleSpeed: 30
 --- !u!1 &434097315
 GameObject:
