@@ -6,14 +6,15 @@ using UnityEngine.InputSystem;
 public class Move : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rbPlayer;
-    private Vector2 moveVal = Vector2.zero;
     [SerializeField] private float moveSpeed = 10;
     private float currentRotation = 0;
     [SerializeField] private float gravityPower = 9.4f;
-    public void OnMove(InputValue value)
+    private Vector2 moveVal;
+
+    //true = player, false = IA
+    public void SetMove(Vector2 move)
     {
-        //get input values (ZQSD/arrows) to move
-        moveVal = value.Get<Vector2>();
+        moveVal=move;
     }
 
     void FixedUpdate()

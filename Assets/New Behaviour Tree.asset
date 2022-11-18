@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: New Behaviour Tree
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 1040473766707593216
+  nodes:
+  - rid: 1040473766707593216
+  - rid: 1040473766707593217
+  - rid: 1040473766707593218
+  - rid: 1040473766707593219
+  treeState: 0
+  blackboard: {fileID: 0}
+  viewPosition: {x: 235.2, y: 45.6, z: 0}
+  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1040473766707593216
+      type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: bbd84cef-bb8f-41e7-8f39-87384f82637a
+        position: {x: 0, y: 0}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 1040473766707593217
+    - rid: 1040473766707593217
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 656aac252e227a640ac96d056613e923
+        position: {x: 0.0000076293945, y: 136.93005}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 1040473766707593219
+    - rid: 1040473766707593218
+      type: {class: IAMove, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: e41f041ed239c1044bfa68d548ae6651
+        position: {x: 0.000009536743, y: 332.62}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        _move: {fileID: 0}
+    - rid: 1040473766707593219
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 58137bc5504dc5b45b0086f1a6f942ea
+        position: {x: 0, y: 225.6}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 1040473766707593218
+        restartOnSuccess: 1
+        restartOnFailure: 0
