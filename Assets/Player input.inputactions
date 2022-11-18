@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory",
+                    "name": "InventoryInput",
                     "type": "Button",
                     "id": "1f1e3afb-62d7-4755-a4c7-1811179ac5d7",
                     "expectedControlType": "Button",
@@ -269,8 +269,8 @@
                     "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
+                    "groups": "Keyboard&Mouse",
+                    "action": "InventoryInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

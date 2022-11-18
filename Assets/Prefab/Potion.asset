@@ -15,5 +15,5 @@ MonoBehaviour:
   _name: Potion
   _PhysicalRepresentation: {fileID: 5190949328052676168, guid: 823a772ed7ba23c4a916b48eb3ac3b3d,
     type: 3}
-  _InventoryRepresentation: {fileID: 21300000, guid: 4f8f9a884a62bd041b973a3bbad1398d,
+  _InventoryRepresentation: {fileID: 21300000, guid: e16e4dfc604b4c749b99aad85ec4195c,
     type: 3}
