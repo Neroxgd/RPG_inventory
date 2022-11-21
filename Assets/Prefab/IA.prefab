@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 9203827463330875468}
   - component: {fileID: 9203827463330875469}
   - component: {fileID: 9203827463330875474}
-  - component: {fileID: 9203827463330875465}
   - component: {fileID: 6540906381986436330}
   - component: {fileID: 6869524939553134900}
-  - component: {fileID: 4088784183085665674}
   m_Layer: 0
   m_Name: IA
   m_TagString: Untagged
@@ -125,20 +123,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &9203827463330875465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9203827463330875475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6dbd04374a0b346871b7627e4460ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _agent: {fileID: 9203827463330875474}
 --- !u!114 &6540906381986436330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +138,13 @@ MonoBehaviour:
   _move: {fileID: 0}
   _player: {fileID: 0}
   _agent: {fileID: 0}
+  _IA: {fileID: 0}
+  posagent: {fileID: 0}
+  randompos: {x: 0, y: 0, z: 0}
+  minRandomPosX: 0
+  maxRandomPosX: 0
+  minRandomPosY: 0
+  maxRandomPosY: 0
 --- !u!114 &6869524939553134900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,18 +158,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: d34d42594cbb2fe46a133f404a40626f, type: 2}
---- !u!114 &4088784183085665674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9203827463330875475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff80741947821ee49970bab4639107d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rbPlayer: {fileID: 0}
-  moveSpeed: 10
-  gravityPower: 9.4

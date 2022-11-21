@@ -24,7 +24,6 @@ public class Move : MonoBehaviour
         //look the good rotation
         SetRotation();
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, currentRotation, 0), 0.5f);
-        Debug.Log(Physics.gravity);
     }
 
     //set the good looking rotation

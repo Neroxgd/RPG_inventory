@@ -20,15 +20,13 @@ public class IAFollowPlayer : ActionNode
 
         if (iABlackBoard == null)
         {
-            Debug.Log("aaaa");
-            return State.Failure;
-            
+            return State.Failure; 
         }
         Ray ray = new Ray(iABlackBoard._player.transform.position, -iABlackBoard._player.transform.up);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
             iABlackBoard._agent.GetComponent<NavMeshAgent>().SetDestination(hit.point);
-            
+        Debug.Log("fffffffffuuuck");
         return State.Success;
     }
 }
