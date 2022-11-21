@@ -353,12 +353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff80741947821ee49970bab4639107d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &424895184 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1006637899752910213, guid: f4e6289c1c020b14382d366a4cc30a83,
-    type: 3}
-  m_PrefabInstance: {fileID: 9203827463682623901}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &551691339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1384,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _rbPlayer
       value: 
-      objectReference: {fileID: 424895184}
+      objectReference: {fileID: 0}
     - target: {fileID: 4088784183085665674, guid: f4e6289c1c020b14382d366a4cc30a83,
         type: 3}
       propertyPath: m_Enabled
@@ -1411,6 +1405,12 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 655965279}
+    - target: {fileID: 6869524939553134900, guid: f4e6289c1c020b14382d366a4cc30a83,
+        type: 3}
+      propertyPath: tree
+      value: 
+      objectReference: {fileID: 11400000, guid: 807c804d11906c544add26689ec628f5,
+        type: 2}
     - target: {fileID: 6869524939553134900, guid: f4e6289c1c020b14382d366a4cc30a83,
         type: 3}
       propertyPath: m_Enabled

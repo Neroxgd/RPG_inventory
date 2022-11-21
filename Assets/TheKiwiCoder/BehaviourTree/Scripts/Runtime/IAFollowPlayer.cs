@@ -5,7 +5,7 @@ using TheKiwiCoder;
 using UnityEngine.AI;
 
 [System.Serializable]
-public class IAMove : ActionNode
+public class IAFollowPlayer : ActionNode
 {
     [SerializeField] private Move _move;
     
@@ -28,7 +28,7 @@ public class IAMove : ActionNode
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
             iABlackBoard._agent.GetComponent<NavMeshAgent>().SetDestination(hit.point);
-        Debug.Log("bbbbb");
+            
         return State.Success;
     }
 }
