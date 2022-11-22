@@ -5,13 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item/Armor", fileName = "Armor")]
 public class Armor : Item, IEquipable, IDRopable
 {
+
+    public Inventory inventory ; 
+
+    public ItemInstance _itemInstances;
+
     public bool Equipable()
     {
         throw new System.NotImplementedException();
     }
 
-    public bool Drop()
+    public void Drop()
     {
-        throw new System.NotImplementedException();
+        _itemInstances._quantity = _itemInstances._quantity - 1;
     }
 }

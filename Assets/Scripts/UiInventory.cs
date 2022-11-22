@@ -9,6 +9,8 @@ public class UiInventory : MonoBehaviour
     public Inventory _inventory = null;
     public GameObject _panel = null;
 
+    public int _IdIndex; 
+
     public void UpdateInventoryView()
     {
         int i = 0;
@@ -39,6 +41,8 @@ public class UiInventory : MonoBehaviour
         _panel.GetComponent<RectTransform>().position = transform.position + new Vector3(transform.rect.width/3 , transform.rect.height/3, 0);
 
         _panel.SetActive(true);
+        _IdIndex = index ; 
+        Debug.Log(_inventory._itemInstances[_IdIndex]._quantity);
     }
 
 

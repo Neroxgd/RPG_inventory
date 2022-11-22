@@ -6,4 +6,3 @@ public interface IConsommable
 {
     public bool Consume();
 }
-
