@@ -7,8 +7,6 @@ using UnityEngine.AI;
 [System.Serializable]
 public class IAFollowPlayer : ActionNode
 {
-    [SerializeField] private Move _move;
-    
     protected override void OnStart() {
     }
 
@@ -24,9 +22,14 @@ public class IAFollowPlayer : ActionNode
         }
         Ray ray = new Ray(iABlackBoard._player.transform.position, -iABlackBoard._player.transform.up);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit) && iABlackBoard._iASensor.ifdetected)
+        {
             iABlackBoard._agent.GetComponent<NavMeshAgent>().SetDestination(hit.point);
-        Debug.Log("fffffffffuuuck");
-        return State.Success;
+            return State.Success;
+        }
+        
+        return State.Failure;
+
+        
     }
 }

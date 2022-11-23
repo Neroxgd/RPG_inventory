@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6657131556203906793}
   - component: {fileID: 6657131556203906792}
   - component: {fileID: 6657131556203906795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 6657131556233360942}
   - component: {fileID: 6657131556233360936}
   - component: {fileID: 6206861986127150989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

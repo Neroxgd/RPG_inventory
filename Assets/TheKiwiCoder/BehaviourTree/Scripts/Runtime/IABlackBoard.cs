@@ -18,5 +18,6 @@ namespace TheKiwiCoder
         public float maxRandomPosX;
         public float minRandomPosY;
         public float maxRandomPosY;
+        public IASensor _iASensor;
     }
 }

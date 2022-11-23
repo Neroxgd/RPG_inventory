@@ -13,76 +13,76 @@ MonoBehaviour:
   m_Name: IA
   m_EditorClassIdentifier: 
   rootNode:
-    rid: 1040473837575077892
+    rid: 1040473859268804615
   nodes:
-  - rid: 1040473837575077892
-  - rid: 1040473837575077893
-  - rid: 1040473837575077894
-  - rid: 1040473837575077895
-  - rid: 1040473837575077896
+  - rid: 1040473859268804615
+  - rid: 1040473859268804616
+  - rid: 1040473859268804617
+  - rid: 1040473859268804618
+  - rid: 1040473859268804619
   treeState: 0
   blackboard: {fileID: 0}
-  viewPosition: {x: 176, y: 56.8, z: 0}
-  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  viewPosition: {x: 172.8, y: 0.8, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: 1040473837575077892
+    - rid: 1040473859268804615
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: e1f436a9-e005-4b2a-abf1-1d189a37f988
+        guid: 2ad64b0b-fdcf-4690-839f-a085f1ab916e
         position: {x: 0, y: 0}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
         child:
-          rid: 1040473837575077895
-    - rid: 1040473837575077893
-      type: {class: IAFollowPlayer, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 8a5183b35d798fb44a5fe2913904bf57
-        position: {x: -30.399958, y: 397.68402}
-        blackboard: {fileID: 0}
-        description: 
-        drawGizmos: 0
-        _move: {fileID: 0}
-    - rid: 1040473837575077894
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 994c99bd2f45c884598f7e63f52f66e3
-        position: {x: 0.000022888184, y: 233.99913}
-        blackboard: {fileID: 0}
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 1040473837575077896
-    - rid: 1040473837575077895
+          rid: 1040473859268804616
+    - rid: 1040473859268804616
       type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: 1a545b29167f6044494e1d81d4c5f9ac
-        position: {x: 0.000015258789, y: 116.62783}
+        guid: 80d206dd9766b894ea713e4d26d4c17c
+        position: {x: -0.00002670288, y: 124.00002}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
         child:
-          rid: 1040473837575077894
+          rid: 1040473859268804617
         restartOnSuccess: 1
         restartOnFailure: 0
-    - rid: 1040473837575077896
+    - rid: 1040473859268804617
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b8553f1e3b644a44ca9cd8969af830ec
+        position: {x: -0.000076293945, y: 259.70132}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 1040473859268804618
+        - rid: 1040473859268804619
+    - rid: 1040473859268804618
+      type: {class: IAFollowPlayer, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 91e77502b992aa049bc96b0e3e31eace
+        position: {x: -195.82428, y: 418.4}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+    - rid: 1040473859268804619
       type: {class: RandomDeplacement, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: 6af0b86f04095b243ad282fbfc4f1240
-        position: {x: -261.35397, y: 398.39996}
+        guid: 1d561cefc69e3524185e3c768357bf9f
+        position: {x: 125.864975, y: 418.40002}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0

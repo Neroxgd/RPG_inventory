@@ -24,20 +24,23 @@ public class RandomDeplacement : ActionNode
             return State.Failure;
         }
 
-        else if (iABlackBoard.posagent.position == iABlackBoard.randompos || !iABlackBoard._agent.hasPath)
+        if (iABlackBoard.posagent.position == iABlackBoard.randompos || !iABlackBoard._agent.hasPath)
         {
+            //NE MARCHE PAS CAR ILS NE SONT PAS A LA MEME POSITION EXACTEMENT (l'ia et la random pos)
             RandomPos();
             compteur += Time.deltaTime;
             if (compteur > 5)
             {
                 agentGoToPos();
                 compteur = 0;
+
             }
 
         }
 
-        Debug.Log(compteur);
-
+        Debug.Log(iABlackBoard.posagent.position);
+        Debug.Log(iABlackBoard.randompos);
+        Debug.Log(!iABlackBoard._agent.hasPath);
         return State.Success;
 
     }

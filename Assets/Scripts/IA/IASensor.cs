@@ -11,7 +11,9 @@ public class IASensor : MonoBehaviour
     [SerializeField] private Color meshColor = Color.red;
     [SerializeField] private int scanFrequency = 30;
     [SerializeField] private LayerMask layers;
+    [SerializeField] private LayerMask occlusionLayers;
     [SerializeField] private List<GameObject> Objects = new List<GameObject>();
+    public bool ifdetected = false;
     Collider[] colliders = new Collider[50];
     Mesh mesh;
     int count;
@@ -41,12 +43,44 @@ public class IASensor : MonoBehaviour
         {
             GameObject obj = colliders[i].gameObject;
             if (IsInSight(obj))
+            {
                 Objects.Add(obj);
+                if (Vector3.Distance(transform.position, obj.transform.position) > 9)
+                {
+                    ifdetected = false;
+                    // print(Vector3.Distance(transform.position, obj.transform.position));
+                }
+                    
+            }
         }
+
+
     }
 
     public bool IsInSight(GameObject obj)
     {
+        Vector3 origin = transform.position;
+        Vector3 dest = obj.transform.position;
+        Vector3 direction = dest - origin;
+        if (direction.y < 0 || direction.y > height)
+        {
+            return false;
+        }
+
+        direction.y = 0;
+        float deltaAngle = Vector3.Angle(direction, transform.forward);
+        if (deltaAngle > angle)
+        {
+            return false;
+        }
+
+        origin.y += height / 2;
+        dest.y = origin.y;
+        if (Physics.Linecast(origin, dest, occlusionLayers))
+        {
+            return false;
+        }
+        ifdetected = true;
         return true;
     }
     Mesh CreateWedgeMesh()
@@ -150,9 +184,14 @@ public class IASensor : MonoBehaviour
         }
 
         Gizmos.color = Color.green;
-        foreach(var obj in Objects)
+        foreach (var obj in Objects)
         {
             Gizmos.DrawSphere(obj.transform.position, 0.2f);
         }
+    }
+
+    private bool distanceBetweenPlayer()
+    {
+        return true;
     }
 }
