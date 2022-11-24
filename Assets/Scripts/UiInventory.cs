@@ -42,7 +42,6 @@ public class UiInventory : MonoBehaviour
 
         _panel.SetActive(true);
         _IdIndex = index ; 
-        Debug.Log(_inventory._itemInstances[_IdIndex]._quantity);
     }
 
 
