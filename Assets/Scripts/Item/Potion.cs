@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Item/Potion", fileName = "Potion")]
-public class Potion : Item, IConsommable, IDRopable
+public class Potion : Item, IConsommable
 {
     public Inventory inventory ; 
 
@@ -13,8 +13,4 @@ public class Potion : Item, IConsommable, IDRopable
         throw new System.NotImplementedException();
     }
 
-    public void Drop()
-    {
-        _itemInstances._quantity = _itemInstances._quantity - 1;
-    }
 }

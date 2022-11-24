@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_itemInstances.Count < 20)
+        if (_itemInstances.Count < 12)
         {
             Pickable pickable = other.GetComponent<Pickable>();
 
