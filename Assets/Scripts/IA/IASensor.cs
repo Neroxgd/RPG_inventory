@@ -45,12 +45,10 @@ public class IASensor : MonoBehaviour
             if (IsInSight(obj))
             {
                 Objects.Add(obj);
-                if (Vector3.Distance(transform.position, obj.transform.position) > 9)
-                {
-                    ifdetected = false;
-                    // print(Vector3.Distance(transform.position, obj.transform.position));
-                }
-                    
+            }
+            if (Vector3.Distance(transform.position, obj.transform.position) > 9)
+            {
+                ifdetected = false;
             }
         }
 

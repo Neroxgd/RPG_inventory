@@ -22,8 +22,8 @@ MonoBehaviour:
   - rid: 1040473859268804619
   treeState: 0
   blackboard: {fileID: 0}
-  viewPosition: {x: 172.8, y: 0.8, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 235.2, y: 48.8, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
@@ -59,7 +59,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: b8553f1e3b644a44ca9cd8969af830ec
-        position: {x: -0.000076293945, y: 259.70132}
+        position: {x: 0.00011952972, y: 239.55563}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 91e77502b992aa049bc96b0e3e31eace
-        position: {x: -195.82428, y: 418.4}
+        position: {x: -129.64001, y: 433.59998}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 1d561cefc69e3524185e3c768357bf9f
-        position: {x: 125.864975, y: 418.40002}
+        position: {x: 109, y: 433.59998}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0

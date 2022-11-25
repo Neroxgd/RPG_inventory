@@ -24,25 +24,22 @@ public class RandomDeplacement : ActionNode
             return State.Failure;
         }
 
-        if (iABlackBoard.posagent.position == iABlackBoard.randompos || !iABlackBoard._agent.hasPath)
-        {
-            //NE MARCHE PAS CAR ILS NE SONT PAS A LA MEME POSITION EXACTEMENT (l'ia et la random pos)
-            RandomPos();
-            compteur += Time.deltaTime;
+
+        if (!iABlackBoard._iASensor.ifdetected)
+        {   
+            if (!iABlackBoard._agent.hasPath || Vector3.Distance(iABlackBoard._agent.transform.position, iABlackBoard._agent.steeringTarget) < 1.5f)
+                compteur += Time.deltaTime;
             if (compteur > 5)
             {
+                iABlackBoard._agent.ResetPath();
+                RandomPos();
                 agentGoToPos();
                 compteur = 0;
-
             }
-
+            return State.Success;
         }
 
-        Debug.Log(iABlackBoard.posagent.position);
-        Debug.Log(iABlackBoard.randompos);
-        Debug.Log(!iABlackBoard._agent.hasPath);
-        return State.Success;
-
+        return State.Failure;
     }
 
     public void agentGoToPos()
@@ -52,6 +49,6 @@ public class RandomDeplacement : ActionNode
 
     public void RandomPos()
     {
-        iABlackBoard.randompos = new Vector3(Random.Range(iABlackBoard.minRandomPosX, iABlackBoard.maxRandomPosX), iABlackBoard.posagent.position.y, Random.Range(iABlackBoard.minRandomPosY, iABlackBoard.maxRandomPosY));
+        iABlackBoard.randompos = new Vector3(Random.Range(iABlackBoard.minRandomPosX, iABlackBoard.maxRandomPosX), iABlackBoard.posagent.position.y, Random.Range(iABlackBoard.minRandomPosZ, iABlackBoard.maxRandomPosZ));
     }
 }
