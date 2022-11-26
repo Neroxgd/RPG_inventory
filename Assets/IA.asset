@@ -22,8 +22,8 @@ MonoBehaviour:
   - rid: 1040473859268804619
   treeState: 0
   blackboard: {fileID: 0}
-  viewPosition: {x: 235.2, y: 48.8, z: 0}
-  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  viewPosition: {x: 217.6, y: -34.4, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
@@ -64,15 +64,15 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children:
-        - rid: 1040473859268804618
         - rid: 1040473859268804619
+        - rid: 1040473859268804618
     - rid: 1040473859268804618
       type: {class: IAFollowPlayer, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: 91e77502b992aa049bc96b0e3e31eace
-        position: {x: -129.64001, y: 433.59998}
+        position: {x: 150.39996, y: 452}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 1d561cefc69e3524185e3c768357bf9f
-        position: {x: 109, y: 433.59998}
+        position: {x: -156.79999, y: 451.6}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
