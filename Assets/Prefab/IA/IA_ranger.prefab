@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 9203827463330875474}
   - component: {fileID: 6540906381986436330}
   - component: {fileID: 6869524939553134900}
+  - component: {fileID: 1468218282557871040}
   m_Layer: 0
-  m_Name: IA
+  m_Name: IA_ranger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,14 +138,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _move: {fileID: 0}
   _player: {fileID: 0}
-  _agent: {fileID: 0}
-  _IA: {fileID: 0}
-  posagent: {fileID: 0}
+  _agent: {fileID: 9203827463330875474}
+  _IA: {fileID: 9203827463330875475}
+  posagent: {fileID: 9203827463330875470}
   randompos: {x: 0, y: 0, z: 0}
-  minRandomPosX: 0
-  maxRandomPosX: 0
-  minRandomPosY: 0
-  maxRandomPosY: 0
+  minRandomPosX: -27
+  maxRandomPosX: 27
+  minRandomPosZ: 0
+  maxRandomPosZ: 0
+  _iASensor: {fileID: 0}
 --- !u!114 &6869524939553134900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,4 +159,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tree: {fileID: 11400000, guid: d34d42594cbb2fe46a133f404a40626f, type: 2}
+  tree: {fileID: 11400000, guid: 807c804d11906c544add26689ec628f5, type: 2}
+--- !u!114 &1468218282557871040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203827463330875475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985d6983750e5bc4e9ac93657caa4b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 15
+  angle: 60
+  height: 1
+  meshColor: {r: 1, g: 0, b: 0, a: 1}
+  scanFrequency: 30
+  layers:
+    serializedVersion: 2
+    m_Bits: 128
+  occlusionLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  Objects: []
+  ifdetected: 0

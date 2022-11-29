@@ -46,7 +46,7 @@ public class IASensor : MonoBehaviour
             {
                 Objects.Add(obj);
             }
-            if (Vector3.Distance(transform.position, obj.transform.position) > 9)
+            if (Vector3.Distance(transform.position, obj.transform.position) > distance-1)
             {
                 ifdetected = false;
             }
