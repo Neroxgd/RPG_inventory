@@ -2769,6 +2769,7 @@ GameObject:
   - component: {fileID: 1190304723}
   - component: {fileID: 1190304725}
   - component: {fileID: 1190304726}
+  - component: {fileID: 1190304728}
   - component: {fileID: 1190304727}
   m_Layer: 5
   m_Name: Panel
@@ -2891,6 +2892,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1190304721}
+--- !u!114 &1190304728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190304721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40442f94e3d61f45a557cfe649681fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventory: {fileID: 655965287}
+  _UiInventory: {fileID: 1890168705}
 --- !u!1001 &1230888598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4236,7 +4251,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1975567829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1190304728}
+        m_TargetAssemblyTypeName: Equip, Assembly-CSharp
+        m_MethodName: EquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1975567829
 MonoBehaviour:
   m_ObjectHideFlags: 0

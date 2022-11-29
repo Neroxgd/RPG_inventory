@@ -10,9 +10,9 @@ public class Armor : Item, IEquipable
 
     public ItemInstance _itemInstances;
 
-    public bool Equipable()
+    public void Equipable()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("equip");
     }
 
 }

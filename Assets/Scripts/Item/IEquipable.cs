@@ -5,5 +5,5 @@ using UnityEngine;
 
 public interface IEquipable
 {
-    public bool Equipable();
+    void Equipable();
 }

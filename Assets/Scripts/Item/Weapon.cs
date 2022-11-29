@@ -10,7 +10,7 @@ public class Weapon : Item, IEquipable
 
     public ItemInstance _itemInstances;
     
-    public bool Equipable()
+    public void Equipable()
     {
         throw new System.NotImplementedException();
     }
