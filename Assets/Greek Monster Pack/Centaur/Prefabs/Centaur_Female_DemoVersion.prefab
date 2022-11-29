@@ -532,7 +532,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382596633800133644}
-  m_LocalRotation: {x: -0.018813597, y: -0.000000119188186, z: 0.0000000022427542, w: 0.99982303}
+  m_LocalRotation: {x: -0.018813597, y: -0.000000119188186, z: 0.0000000022427542,
+    w: 0.99982303}
   m_LocalPosition: {x: 5.841963e-26, y: 0.0009586907, z: -8.1956386e-10}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.9999999}
   m_ConstrainProportionsScale: 0
@@ -1214,7 +1215,8 @@ MonoBehaviour:
     hairProfile: {fileID: 11400000, guid: 38d90429f993f31459d28c303d85445c, type: 2}
     beardProfile: {fileID: 0}
     eyebrowProfile: {fileID: 11400000, guid: 4bb6560e8d1101d458ffbf2a7aebaeff, type: 2}
-    hairMaterialProfile: {fileID: 11400000, guid: 892be67492b5d534bbd7503f6bbd7608, type: 2}
+    hairMaterialProfile: {fileID: 11400000, guid: 892be67492b5d534bbd7503f6bbd7608,
+      type: 2}
     parentageManager: {fileID: 2596784684963534495}
     hairGroup: {fileID: 8529949507168908014}
     activeHairObject: {fileID: 3563213572345767851}
@@ -1244,7 +1246,8 @@ MonoBehaviour:
     - White
     hairMaterialIndex: 1
   eyeSettings:
-    eyeMaterialProfile: {fileID: 11400000, guid: 784edc8d59681974fb8f9ec475feff35, type: 2}
+    eyeMaterialProfile: {fileID: 11400000, guid: 784edc8d59681974fb8f9ec475feff35,
+      type: 2}
     eyeUsableMaterials:
     - Blue
     - Light Blue
@@ -3264,7 +3267,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046724744479098425}
-  m_LocalRotation: {x: -0.017329337, y: -0.000000119191334, z: 0.0000000061974488, w: 0.99984986}
+  m_LocalRotation: {x: -0.017329337, y: -0.000000119191334, z: 0.0000000061974488,
+    w: 0.99984986}
   m_LocalPosition: {x: 2.4545187e-11, y: 0.0009850846, z: -1.1576873e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4432,7 +4436,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2577386967436387729}
-  m_LocalRotation: {x: -0.024248648, y: -0.00000011917422, z: 0.0000000028906628, w: 0.999706}
+  m_LocalRotation: {x: -0.024248648, y: -0.00000011917422, z: 0.0000000028906628,
+    w: 0.999706}
   m_LocalPosition: {x: 1.7220536e-19, y: 0.011915658, z: -0.00077554624}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -13302,7 +13307,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9159856785583446787}
-  m_LocalRotation: {x: -0.017329337, y: 0.000000119191334, z: -0.0000000061974488, w: 0.99984986}
+  m_LocalRotation: {x: -0.017329337, y: 0.000000119191334, z: -0.0000000061974488,
+    w: 0.99984986}
   m_LocalPosition: {x: -2.4545187e-11, y: 0.0009850846, z: -1.1576873e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
