@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbbab71d89eaf842b28e7f856fdc3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _image: {fileID: 1370282533904822858, guid: 9724d232428079040b66d92f6030d7f7, type: 3}
+  _image: {fileID: 0}
   _ArmorSprite: {fileID: 21300000, guid: 43f946e297c93144da2c3d967e7fee63, type: 3}
 --- !u!65 &6357651519123230870
 BoxCollider:

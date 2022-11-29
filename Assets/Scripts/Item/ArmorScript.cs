@@ -10,6 +10,6 @@ public class ArmorScript : MonoBehaviour, IEquipable
     public void Equipable()
     {
         Debug.Log("Equip");
-        //_image.sprite = _ArmorSprite; 
+        _image.sprite = _ArmorSprite; 
     }
 }
