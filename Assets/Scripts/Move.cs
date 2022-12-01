@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody _rbPlayer;
     [SerializeField] private float moveSpeed = 10;
     private float currentRotation = 0;
@@ -20,6 +21,11 @@ public class Move : MonoBehaviour
     {
         //move in the direction, apply the gravity
         _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / gravityPower), moveVal.y) * moveSpeed;
+
+        //animation
+        if (moveVal != Vector2.zero)
+            _animator.SetBool("Run", true);
+        else _animator.SetBool("Run", false);
 
         //look the good rotation
         SetRotation();
