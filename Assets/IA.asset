@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: IA
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 1040473859268804615
+  nodes:
+  - rid: 1040473859268804615
+  - rid: 1040473859268804616
+  - rid: 1040473859268804617
+  - rid: 1040473859268804618
+  - rid: 1040473859268804619
+  treeState: 0
+  blackboard: {fileID: 0}
+  viewPosition: {x: 217.6, y: -34.4, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1040473859268804615
+      type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 2ad64b0b-fdcf-4690-839f-a085f1ab916e
+        position: {x: 0, y: 0}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 1040473859268804616
+    - rid: 1040473859268804616
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 80d206dd9766b894ea713e4d26d4c17c
+        position: {x: -0.00002670288, y: 124.00002}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 1040473859268804617
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 1040473859268804617
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b8553f1e3b644a44ca9cd8969af830ec
+        position: {x: 0.00011952972, y: 239.55563}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 1040473859268804619
+        - rid: 1040473859268804618
+    - rid: 1040473859268804618
+      type: {class: IAFollowPlayer, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 91e77502b992aa049bc96b0e3e31eace
+        position: {x: 150.39996, y: 452}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+    - rid: 1040473859268804619
+      type: {class: RandomDeplacement, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 1d561cefc69e3524185e3c768357bf9f
+        position: {x: -156.79999, y: 451.6}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0

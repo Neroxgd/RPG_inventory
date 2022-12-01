@@ -15,6 +15,8 @@ namespace TheKiwiCoder {
         void Start() {
             context = CreateBehaviourTreeContext();
             tree = tree.Clone();
+
+            tree.blackboard = GetComponent<Blackboard>();
             tree.Bind(context);
         }
 
