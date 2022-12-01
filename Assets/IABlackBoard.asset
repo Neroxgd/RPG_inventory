@@ -22,8 +22,8 @@ MonoBehaviour:
   - rid: 5884289407741853701
   treeState: 0
   blackboard: {fileID: 0}
-  viewPosition: {x: 126.4, y: 12, z: 0}
-  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  viewPosition: {x: 134.4, y: 23.2, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
