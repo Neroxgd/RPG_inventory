@@ -18,7 +18,7 @@ namespace TheKiwiCoder {
 
         public Node.State treeState = Node.State.Running;
 
-        public Blackboard blackboard;
+        public Blackboard blackboard = new Blackboard();
 
 #region  EditorProperties 
         public Vector3 viewPosition = new Vector3(600, 300);

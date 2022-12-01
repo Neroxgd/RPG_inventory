@@ -37,7 +37,7 @@ public class IASensor : MonoBehaviour
 
     private void Scan()
     {
-        count = Physics.OverlapSphereNonAlloc(transform.position, distance, colliders, layers, QueryTriggerInteraction.Collide);
+        count = Physics.OverlapSphereNonAlloc(new Vector3(transform.position.x, transform.position.y-2, transform.position.z) , distance, colliders, layers, QueryTriggerInteraction.Collide);
         Objects.Clear();
         for (int i = 0; i < count; i++)
         {
@@ -46,7 +46,7 @@ public class IASensor : MonoBehaviour
             {
                 Objects.Add(obj);
             }
-            if (Vector3.Distance(transform.position, obj.transform.position) > distance-1)
+            if (Vector3.Distance(new Vector3(transform.position.x, transform.position.y-2, transform.position.z), obj.transform.position) > distance-1)
             {
                 ifdetected = false;
             }
@@ -57,7 +57,7 @@ public class IASensor : MonoBehaviour
 
     public bool IsInSight(GameObject obj)
     {
-        Vector3 origin = transform.position;
+        Vector3 origin = new Vector3(transform.position.x, transform.position.y-2, transform.position.z);
         Vector3 dest = obj.transform.position;
         Vector3 direction = dest - origin;
         if (direction.y < 0 || direction.y > height)
@@ -172,10 +172,10 @@ public class IASensor : MonoBehaviour
         if (mesh)
         {
             Gizmos.color = meshColor;
-            Gizmos.DrawMesh(mesh, transform.position, transform.rotation);
+            Gizmos.DrawMesh(mesh, new Vector3(transform.position.x, transform.position.y-2, transform.position.z), transform.rotation);
         }
 
-        Gizmos.DrawWireSphere(transform.position, distance);
+        Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y-2, transform.position.z), distance);
         for (int i = 0; i < count; i++)
         {
             Gizmos.DrawSphere(colliders[i].transform.position, 0.2f);

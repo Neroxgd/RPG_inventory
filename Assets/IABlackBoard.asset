@@ -10,79 +10,79 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: IA
+  m_Name: IABlackBoard
   m_EditorClassIdentifier: 
   rootNode:
-    rid: 1040473859268804615
+    rid: 5884289407741853697
   nodes:
-  - rid: 1040473859268804615
-  - rid: 1040473859268804616
-  - rid: 1040473859268804617
-  - rid: 1040473859268804618
-  - rid: 1040473859268804619
+  - rid: 5884289407741853697
+  - rid: 5884289407741853698
+  - rid: 5884289407741853699
+  - rid: 5884289407741853700
+  - rid: 5884289407741853701
   treeState: 0
   blackboard: {fileID: 0}
-  viewPosition: {x: 217.6, y: -34.4, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 126.4, y: 12, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: 1040473859268804615
+    - rid: 5884289407741853697
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: 2ad64b0b-fdcf-4690-839f-a085f1ab916e
+        guid: 8beca749-e7c5-4491-83f0-dc53b8a8ec90
         position: {x: 0, y: 0}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
         child:
-          rid: 1040473859268804616
-    - rid: 1040473859268804616
-      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 80d206dd9766b894ea713e4d26d4c17c
-        position: {x: -0.00002670288, y: 124.00002}
-        blackboard: {fileID: 0}
-        description: 
-        drawGizmos: 0
-        child:
-          rid: 1040473859268804617
-        restartOnSuccess: 1
-        restartOnFailure: 0
-    - rid: 1040473859268804617
+          rid: 5884289407741853699
+    - rid: 5884289407741853698
       type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: b8553f1e3b644a44ca9cd8969af830ec
-        position: {x: 0.00011952972, y: 239.55563}
+        guid: 9f792d9bd1e3a5046a3a514680d10696
+        position: {x: -11.999987, y: 275.2791}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
         children:
-        - rid: 1040473859268804619
-        - rid: 1040473859268804618
-    - rid: 1040473859268804618
+        - rid: 5884289407741853701
+        - rid: 5884289407741853700
+    - rid: 5884289407741853699
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: f84a01f6e15762b4eac29a6000f4781c
+        position: {x: -11.9999695, y: 109.60007}
+        blackboard: {fileID: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 5884289407741853698
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 5884289407741853700
       type: {class: IAFollowPlayer, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: 91e77502b992aa049bc96b0e3e31eace
-        position: {x: 150.39996, y: 452}
+        guid: d46fe73345d21eb499c451f563481f49
+        position: {x: 138.40001, y: 388.80005}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0
-    - rid: 1040473859268804619
+    - rid: 5884289407741853701
       type: {class: RandomDeplacement, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: 1d561cefc69e3524185e3c768357bf9f
-        position: {x: -156.79999, y: 451.6}
+        guid: da9150c5ef6cafb46a8b88a9edb31e68
+        position: {x: -225.97495, y: 388.79984}
         blackboard: {fileID: 0}
         description: 
         drawGizmos: 0

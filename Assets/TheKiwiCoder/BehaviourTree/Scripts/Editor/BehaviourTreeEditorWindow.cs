@@ -140,7 +140,7 @@ namespace TheKiwiCoder {
             if (Selection.activeGameObject) {
                 BehaviourTreeRunner runner = Selection.activeGameObject.GetComponent<BehaviourTreeRunner>();
                 if (runner) {
-                    // SelectTree(runner.tree);
+                    SelectTree(runner.tree);
                 }
             }
         }
@@ -161,8 +161,8 @@ namespace TheKiwiCoder {
                 titleLabel.text = $"TreeView ({path})";
             }
 
-            overlayView.Hide();
-            // treeView.PopulateView(serializer);
+            // overlayView.Hide();
+            treeView.PopulateView(serializer);
             blackboardView.Bind(serializer);
         }
 
