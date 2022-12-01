@@ -8,8 +8,7 @@ namespace TheKiwiCoder {
     // Use this to store temporary data that multiple nodes need read and write access to.
     // Add other properties here that make sense for your specific use case.
     [System.Serializable]
-    public class Blackboard : MonoBehaviour {
+    public abstract class Blackboard : MonoBehaviour {
 
-        public Vector3 moveToPosition;
     }
 }
