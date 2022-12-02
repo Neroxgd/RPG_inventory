@@ -238,33 +238,18 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &194867081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8574200461362623334, guid: 548ab7c12f5de164b81055bcd3ed7a3b,
+--- !u!114 &194867083 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3130067174131658683, guid: 548ab7c12f5de164b81055bcd3ed7a3b,
     type: 3}
   m_PrefabInstance: {fileID: 1805411115}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &194867083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194867081}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d11c82fbb5a0b2b48941c3b1655bd09a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1276219420}
-  boxCollider: {fileID: 194867084}
-  dmg: 5
---- !u!65 &194867084 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 1128226005423204434, guid: 548ab7c12f5de164b81055bcd3ed7a3b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1805411115}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &240564761 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 240564761, guid: 7f4d59fe6788d4442ae41a24c601fad8,
@@ -1434,6 +1419,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3130067174131658683, guid: 548ab7c12f5de164b81055bcd3ed7a3b,
+        type: 3}
+      propertyPath: dmg
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 3147815115954235861, guid: 548ab7c12f5de164b81055bcd3ed7a3b,
         type: 3}
       propertyPath: m_Layer
@@ -2460,6 +2450,11 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 520670732853711558, guid: 7f4d59fe6788d4442ae41a24c601fad8,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1276219421}
     - target: {fileID: 1616484280268169343, guid: 7f4d59fe6788d4442ae41a24c601fad8,
         type: 3}
       propertyPath: _iASensor

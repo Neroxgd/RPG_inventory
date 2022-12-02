@@ -16,7 +16,10 @@ public class Attack : MonoBehaviour
     public void _Attack()
     {
         boxCollider.enabled = !boxCollider.enabled;
-        animator.SetTrigger("punchRight");
+        if (Random.Range(0,2) == 0)
+            animator.SetTrigger("punchRight");
+        else
+            animator.SetTrigger("punchLeft");
         StartCoroutine(attackTime());
     }
 
@@ -24,19 +27,17 @@ public class Attack : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mob"))
         {
-            print("oui");
             other.GetComponent<Animator>().SetTrigger("Hit");
             other.GetComponent<LifeMob>().lifeMob -= dmg;
+            other.GetComponent<LifeMob>().lifeMob = Mathf.Clamp(other.GetComponent<LifeMob>().lifeMob, 0, 200);
+
             print(other.GetComponent<LifeMob>().lifeMob);
-            other.GetComponent<Animator>().ResetTrigger("Hit");
         }
-        // print(other.GetComponentInChildren<LifeMob>().lifeMob);
     }
 
     IEnumerator attackTime()
     {
         yield return new WaitForSeconds(1);
         boxCollider.enabled = !boxCollider.enabled;
-        animator.ResetTrigger("punchRight");
     }
 }

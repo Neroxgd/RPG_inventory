@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4212721621039489828}
   - component: {fileID: 1128226005423204434}
+  - component: {fileID: 3130067174131658683}
   m_Layer: 7
   m_Name: attack
   m_TagString: Untagged
@@ -43,8 +44,23 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9036828, y: 1.5968552, z: 1.1188996}
-  m_Center: {x: 0.020898521, y: 1.0795493, z: 1.068112}
+  m_Size: {x: 1.9036828, y: 1.5968552, z: 1.7254741}
+  m_Center: {x: 0.020898521, y: 1.0795493, z: 0.76482475}
+--- !u!114 &3130067174131658683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574200461362623334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11c82fbb5a0b2b48941c3b1655bd09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4923157029471687086}
+  boxCollider: {fileID: 1128226005423204434}
+  dmg: 5
 --- !u!1001 &8885798892556539394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3388840107371486329, guid: 60770bdb4dc667c45bea53db0339dc05,
         type: 3}
@@ -169,6 +185,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+--- !u!95 &4923157029471687086 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4540229000190281644, guid: 60770bdb4dc667c45bea53db0339dc05,
+    type: 3}
+  m_PrefabInstance: {fileID: 8885798892556539394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7200654892625535601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05,
@@ -267,6 +289,20 @@ MonoBehaviour:
   moveSpeed: 10
   gravityPower: 9.4
   _camera: {fileID: 0}
+--- !u!114 &7955887520985666766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200654892625535601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70a6a96742fd5241a52a0c9e3098a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4923157029471687086}
+  life: 100
 --- !u!4 &7540729838780283083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05,
