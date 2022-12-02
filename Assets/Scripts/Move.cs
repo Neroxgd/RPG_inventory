@@ -11,6 +11,7 @@ public class Move : MonoBehaviour
     private float currentRotation = 0;
     [SerializeField] private float gravityPower = 9.4f;
     private Vector2 moveVal;
+    [SerializeField] _Camera _camera;
 
     public void SetMove(Vector2 move)
     {
@@ -19,6 +20,7 @@ public class Move : MonoBehaviour
 
     void FixedUpdate()
     {
+        _camera.Cam();
         //move in the direction, apply the gravity
         _rbPlayer.velocity = new Vector3(moveVal.x, -Mathf.Abs(_rbPlayer.velocity.y / gravityPower), moveVal.y) * moveSpeed;
 
