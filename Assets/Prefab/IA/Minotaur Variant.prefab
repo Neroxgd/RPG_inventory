@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 520670732853711558}
   m_Layer: 0
   m_Name: attack
-  m_TagString: Untagged
+  m_TagString: Minotaur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

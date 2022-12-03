@@ -9,7 +9,6 @@ public class LifeMob : MonoBehaviour
     void Start()
     {
         InLife = true;
-        lifeMob = 200;
     }
 
     void Update()

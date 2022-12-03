@@ -35,10 +35,11 @@ public class IAAttacks : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.position) < 2 && GetComponentInParent<IASensor>().ifdetected && !atkTime && gameObject.tag == "Minotaur")
             IAAttack();
-        if (Vector3.Distance(transform.position, player.position) < atkDistance && GetComponentInParent<IASensor>().ifdetected && !atkTime && gameObject.tag == "Gorgon")
+        else if (Vector3.Distance(transform.position, player.position) < atkDistance && GetComponentInParent<IASensor>().ifdetected && !atkTime && gameObject.tag == "Gorgon")
             ATKDistance();
         if (laser)
-            _life.life -= 1f * Time.deltaTime;
+            _life.life -= 2f * Time.deltaTime;
+        print(_life.life);
     }
 
     public void ATKDistance()
@@ -53,7 +54,7 @@ public class IAAttacks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Vector3.Distance(transform.position, player.position) < 2)
+            if (Vector3.Distance(transform.position, player.position) < 2 && gameObject.tag == "Minotaur")
                 other.GetComponent<Life>().life -= dmg;
             else if (Vector3.Distance(transform.position, player.position) < atkDistance && gameObject.tag == "Gorgon")
                 laser = true;
