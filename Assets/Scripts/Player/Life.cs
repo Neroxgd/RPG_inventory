@@ -8,14 +8,24 @@ public class Life : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private TextMeshProUGUI _textMeshProUGUI;
     public int life = 100;
+    private bool InLife = true;
+
+    void Start()
+    {
+        InLife = true;
+        life = 100;
+    }
 
     void LateUpdate()
     {
-        if (life <= 0)
+        if (life <= 0 && InLife)
         {
             // StartCoroutine(Death());
             animator.SetTrigger("death");
             Destroy(GetComponent<Move>());
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<DeathEffect>().Death();
+            InLife = false;
         }
     }
 
