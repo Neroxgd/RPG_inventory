@@ -25,7 +25,7 @@ public class Attack : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Mob"))
+        if (other.gameObject.CompareTag("Minotaur") || other.gameObject.CompareTag("Gorgon"))
         {
             other.GetComponent<Animator>().SetTrigger("Hit");
             other.GetComponent<LifeMob>().lifeMob -= dmg;

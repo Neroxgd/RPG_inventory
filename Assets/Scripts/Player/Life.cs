@@ -7,7 +7,7 @@ public class Life : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private TextMeshProUGUI _textMeshProUGUI;
-    public int life = 100;
+    public float life = 100;
     private bool InLife = true;
 
     void Start()

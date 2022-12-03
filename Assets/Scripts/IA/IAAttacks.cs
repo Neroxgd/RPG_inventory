@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class IAAttacks : MonoBehaviour
 {
     private Animator animator;
     [SerializeField] Transform player;
     [SerializeField] int dmg = 5;
+    [SerializeField] private VisualEffect VFXGraph;
     private BoxCollider boxCollider;
     private bool atkTime = false;
+    private bool laser = false;
+    [SerializeField] private float atkDistance = 2;
+    [SerializeField] private Life _life;
     void Start()
     {
         boxCollider = GetComponent<BoxCollider>();
@@ -28,21 +33,35 @@ public class IAAttacks : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) < 2 && GetComponentInParent<IASensor>().ifdetected && !atkTime)
+        if (Vector3.Distance(transform.position, player.position) < 2 && GetComponentInParent<IASensor>().ifdetected && !atkTime && gameObject.tag == "Minotaur")
             IAAttack();
+        if (Vector3.Distance(transform.position, player.position) < atkDistance && GetComponentInParent<IASensor>().ifdetected && !atkTime && gameObject.tag == "Gorgon")
+            ATKDistance();
+        if (laser)
+            _life.life -= 1f * Time.deltaTime;
+    }
+
+    public void ATKDistance()
+    {
+        print("aaaa");
+        atkTime = true;
+        StartCoroutine(attackTime());
+        VFXGraph.Play();
     }
 
     void OnTriggerEnter(Collider other)
     {
-            if (other.gameObject.CompareTag("Player"))
-            {
-
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (Vector3.Distance(transform.position, player.position) < 2)
                 other.GetComponent<Life>().life -= dmg;
-                other.GetComponent<Life>().life = Mathf.Clamp(other.GetComponent<Life>().life, 0, 100);
-                other.GetComponent<Life>().currentLife();
+            else if (Vector3.Distance(transform.position, player.position) < atkDistance && gameObject.tag == "Gorgon")
+                laser = true;
+            other.GetComponent<Life>().life = Mathf.Clamp(other.GetComponent<Life>().life, 0, 100);
+            other.GetComponent<Life>().currentLife();
 
-                print(other.GetComponent<Life>().life);
-            }
+            print(other.GetComponent<Life>().life);
+        }
     }
 
     IEnumerator attackTime()
@@ -52,6 +71,7 @@ public class IAAttacks : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         atkTime = false;
+        laser = false;
         boxCollider.enabled = !boxCollider.enabled;
     }
 }
