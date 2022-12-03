@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 public class IAAttacks : MonoBehaviour
 {
     private Animator animator;
@@ -19,9 +19,8 @@ public class IAAttacks : MonoBehaviour
     public void IAAttack()
     {
         atkTime = true;
-        boxCollider.enabled = !boxCollider.enabled;
         StartCoroutine(attackTime());
-        if (Random.Range(0,2) == 0)
+        if (Random.Range(0, 2) == 0)
             animator.SetTrigger("Attack_01");
         else
             animator.SetTrigger("Attack_02");
@@ -35,19 +34,24 @@ public class IAAttacks : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.GetComponent<Life>().life -= dmg;
-            other.GetComponent<Life>().life = Mathf.Clamp(other.GetComponent<Life>().life, 0, 100);
+            if (other.gameObject.CompareTag("Player"))
+            {
 
-            print(other.GetComponent<Life>().life);
-        }
+                other.GetComponent<Life>().life -= dmg;
+                other.GetComponent<Life>().life = Mathf.Clamp(other.GetComponent<Life>().life, 0, 100);
+                other.GetComponent<Life>().currentLife();
+
+                print(other.GetComponent<Life>().life);
+            }
     }
 
     IEnumerator attackTime()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1f);
         boxCollider.enabled = !boxCollider.enabled;
+
+        yield return new WaitForSeconds(2f);
         atkTime = false;
+        boxCollider.enabled = !boxCollider.enabled;
     }
 }

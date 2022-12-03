@@ -12,7 +12,8 @@ public class Input : MonoBehaviour
     {
         //get input values (ZQSD/arrows) to move
         moveVal = value.Get<Vector2>();
-        _move.SetMove(moveVal);
+        if (_move != null)
+            _move.SetMove(moveVal);
     }
 
     public void OnFire()
