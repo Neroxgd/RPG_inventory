@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeMob: 200
+  wall: {fileID: 0}
 --- !u!114 &169722277
 MonoBehaviour:
   m_ObjectHideFlags: 0

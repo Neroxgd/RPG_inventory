@@ -38,7 +38,7 @@ public class IAAttacks : MonoBehaviour
         else if (Vector3.Distance(transform.position, player.position) < atkDistance && GetComponentInParent<IASensor>().ifdetected && !atkTime && gameObject.tag == "Gorgon")
             ATKDistance();
         if (laser)
-            _life.life -= 2f * Time.deltaTime;
+            _life.life -= 4f * Time.deltaTime;
         _life.currentLife();
         // print(_life.life);
     }
@@ -59,7 +59,7 @@ public class IAAttacks : MonoBehaviour
                 other.GetComponent<Life>().life -= dmg;
             else if (Vector3.Distance(transform.position, player.position) < atkDistance && gameObject.tag == "Gorgon")
                 laser = true;
-            other.GetComponent<Life>().life = Mathf.Clamp(other.GetComponent<Life>().life, 0, 100);
+            other.GetComponent<Life>().life = Mathf.Clamp(other.GetComponent<Life>().life, 0, 150);
         }
     }
 

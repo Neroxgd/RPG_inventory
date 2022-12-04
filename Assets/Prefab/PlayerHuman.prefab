@@ -537,6 +537,7 @@ MonoBehaviour:
   animator: {fileID: 4923157029471687086}
   _textMeshProUGUI: {fileID: 0}
   life: 100
+  MaxLife: 150
 --- !u!114 &8902930756522727880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +555,20 @@ MonoBehaviour:
   moveSpeed: 10
   gravityPower: 9.4
   _camera: {fileID: 0}
+--- !u!114 &5605921665475130081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200654892625535601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377d2b4d9583e324082211130e003737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInstances: []
+  _inventoryMenu: {fileID: 0}
 --- !u!4 &7540729838780283083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05,

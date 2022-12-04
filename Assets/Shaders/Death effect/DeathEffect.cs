@@ -18,13 +18,48 @@ public class DeathEffect : MonoBehaviour
             {
                 skinnedMaterials.Add(_skinnedMeshRenderer[i].material);
             }
-            
+
     }
 
     public void Death()
     {
         StartCoroutine(_DeathEffect());
     }
+
+    public void InverseDeath()
+    {
+        StartCoroutine(_InverseDeathEffect());
+    }
+    IEnumerator _InverseDeathEffect()
+    {
+        // if (skinnedMeshRenderer != null)
+        //     for (int i = 0; i < skinnedMeshRenderer.Length; i++)
+        // {
+        // skinnedMaterials = skinnedMeshRenderer[i].materials;
+        // if (_skinnedMeshRenderer != null)
+        //     foreach (SkinnedMeshRenderer skinnedMeshRenderer in _skinnedMeshRenderer)
+        //     {
+        // skinnedMaterials = skinnedMeshRenderer.materials;
+        if (VFXGraph != null)
+            VFXGraph.Play();
+        if (skinnedMaterials.Count > 0)
+        {
+            float counter = 0;
+
+            while (skinnedMaterials[0].GetFloat("_DissolveAmount") > 0)
+            {
+                counter -= dissoleRate;
+                for (int y = 0; y < skinnedMaterials.Count; y++)
+                    skinnedMaterials[y].SetFloat("_DissolveAmount", counter);
+                print("oui");
+                yield return new WaitForSeconds(refreshRate);
+            }
+        }
+        // }
+
+        // }
+    }
+
     IEnumerator _DeathEffect()
     {
         // if (skinnedMeshRenderer != null)
@@ -50,10 +85,6 @@ public class DeathEffect : MonoBehaviour
                 yield return new WaitForSeconds(refreshRate);
             }
         }
-        // }
-
-        // }
     }
-
 
 }

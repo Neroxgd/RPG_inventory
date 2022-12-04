@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeMob: 200
+  wall: {fileID: 0}
 --- !u!4 &5269717498177985954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1637959871405999807, guid: 044526eea15428a47bb98a9061fb79b9,

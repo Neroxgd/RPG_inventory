@@ -29,7 +29,7 @@ public class Attack : MonoBehaviour
         {
             other.GetComponent<Animator>().SetTrigger("Hit");
             other.GetComponent<LifeMob>().lifeMob -= dmg;
-            other.GetComponent<LifeMob>().lifeMob = Mathf.Clamp(other.GetComponent<LifeMob>().lifeMob, 0, 200);
+            other.GetComponent<LifeMob>().lifeMob = Mathf.Clamp(other.GetComponent<LifeMob>().lifeMob, 0, 1000);
 
             print(other.GetComponent<LifeMob>().lifeMob);
         }

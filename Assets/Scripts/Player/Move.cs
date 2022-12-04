@@ -7,8 +7,8 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody _rbPlayer;
-    [SerializeField] private float moveSpeed = 10;
-    private float currentRotation = 0;
+    public float moveSpeed = 10;
+    public float currentRotation = 0;
     [SerializeField] private float gravityPower = 9.4f;
     private Vector2 moveVal;
     [SerializeField] _Camera _camera;

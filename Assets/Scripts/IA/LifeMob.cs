@@ -5,6 +5,7 @@ using UnityEngine;
 public class LifeMob : MonoBehaviour
 {
     public int lifeMob = 200;
+    [SerializeField] private GameObject wall;
     private bool InLife = true;
     void Start()
     {
@@ -23,6 +24,8 @@ public class LifeMob : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(3);
+        if (wall != null)
+            Destroy(wall);
         Destroy(gameObject);
     }
 }
