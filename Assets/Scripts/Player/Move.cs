@@ -12,6 +12,7 @@ public class Move : MonoBehaviour
     [SerializeField] private float gravityPower = 9.4f;
     private Vector2 moveVal;
     [SerializeField] _Camera _camera;
+    [SerializeField] AudioManager audioManager;
 
     public void SetMove(Vector2 move)
     {

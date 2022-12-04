@@ -25,6 +25,9 @@ public class LifeMob : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(3);
+        FindObjectOfType<AudioManager>().Play("mobdeath");
+        FindObjectOfType<AudioManager>().Stop("thecoldbattle");
+        FindObjectOfType<AudioManager>().Play("foreverlands");
         if (wall != null)
             Destroy(wall);
         else 
