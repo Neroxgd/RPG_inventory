@@ -8,7 +8,6 @@ namespace TheKiwiCoder
 {
     public class IABlackBoard : Blackboard
     {
-        public Move _move;
         public GameObject _player;
         public NavMeshAgent _agent;
         public GameObject _IA;
