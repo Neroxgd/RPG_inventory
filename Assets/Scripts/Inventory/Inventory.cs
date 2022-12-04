@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
 
     public List<ItemInstance> _itemInstances = new List<ItemInstance>();
+
+    public GameObject _inventoryMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,7 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_itemInstances.Count < 20)
+        if (_itemInstances.Count < 12)
         {
             Pickable pickable = other.GetComponent<Pickable>();
 
@@ -47,5 +50,18 @@ public class Inventory : MonoBehaviour
                 GameObject.Destroy(other.gameObject);
             }
         }
+    }
+
+    public void OnInventoryInput(InputValue check)
+    {
+        if(check.isPressed)
+        {
+            _inventoryMenu.SetActive(true);
+        }
+    }
+
+    public void CloseInventory()
+    {
+        _inventoryMenu.SetActive(false);
     }
 }

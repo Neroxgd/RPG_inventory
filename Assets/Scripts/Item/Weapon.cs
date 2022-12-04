@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Item/Weapon", fileName = "Weapon")]
-public class Weapon : Item, IEquipable, IDRopable
+public class Weapon : Item, IEquipable
 {
-    public bool Equipable()
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public bool Drop()
+    public Inventory inventory ; 
+
+    public ItemInstance _itemInstances;
+    
+    public void Equipable()
     {
         throw new System.NotImplementedException();
     }

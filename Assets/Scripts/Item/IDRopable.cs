@@ -5,6 +5,6 @@ using UnityEngine;
 
 public interface IDRopable
 {
-    public bool Drop();
+    void Drop();
 }
 
