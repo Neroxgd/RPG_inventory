@@ -6,7 +6,7 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private BoxCollider boxCollider;
-    [SerializeField] int dmg = 5;
+    public int dmg = 5;
 
     void Start()
     {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potion
   m_EditorClassIdentifier: 
   _name: Potion
-  _PhysicalRepresentation: {fileID: 100000, guid: 2a7aeccaf51cb44258e96e4127ac8d7e,
+  _PhysicalRepresentation: {fileID: 173500, guid: fb5a9652227c545d98a413cd73b80b69,
     type: 3}
   _InventoryRepresentation: {fileID: 21300000, guid: 2f7c161799230f4468a092a5a79c36f4,
     type: 3}

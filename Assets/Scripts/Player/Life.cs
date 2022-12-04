@@ -10,6 +10,8 @@ public class Life : MonoBehaviour
     public float life = 100;
     private bool InLife = true;
 
+    public float MaxLife = 150;
+
     void Start()
     {
         InLife = true;

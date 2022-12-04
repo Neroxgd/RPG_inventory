@@ -17,9 +17,6 @@ public class Drop : MonoBehaviour
         
         Instantiate(_inventory._itemInstances[_UiInventory._IdIndex]._item._PhysicalRepresentation, _InstantiateDrop, Quaternion.identity);
 
-        if(_inventory._itemInstances[_UiInventory._IdIndex]._quantity == 0)
-        {
-            _inventory._itemInstances.Remove(_inventory._itemInstances[_UiInventory._IdIndex]);
-        }
+
     }
 }

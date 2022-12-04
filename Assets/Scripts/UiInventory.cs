@@ -62,5 +62,9 @@ public class UiInventory : MonoBehaviour
     void Update()
     {
         UpdateInventoryView();
+        if(_inventory._itemInstances[_IdIndex]._quantity == 0)
+        {
+            _inventory._itemInstances.Remove(_inventory._itemInstances[_IdIndex]);
+        }
     }
 }
