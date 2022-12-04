@@ -37,6 +37,6 @@ public class Life : MonoBehaviour
 
     public void currentLife()
     {
-        _textMeshProUGUI.text = "life : " + life;
+        _textMeshProUGUI.text = "life : " + (int)life;
     }
 }
