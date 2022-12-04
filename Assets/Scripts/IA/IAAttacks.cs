@@ -40,7 +40,7 @@ public class IAAttacks : MonoBehaviour
         if (laser)
             _life.life -= 2f * Time.deltaTime;
         _life.currentLife();
-        print(_life.life);
+        // print(_life.life);
     }
 
     public void ATKDistance()
