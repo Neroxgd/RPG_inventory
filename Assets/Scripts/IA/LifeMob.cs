@@ -6,6 +6,7 @@ public class LifeMob : MonoBehaviour
 {
     public int lifeMob = 200;
     [SerializeField] private GameObject wall;
+    [SerializeField] private GameObject wallwin;
     private bool InLife = true;
     void Start()
     {
@@ -26,6 +27,8 @@ public class LifeMob : MonoBehaviour
         yield return new WaitForSeconds(3);
         if (wall != null)
             Destroy(wall);
+        else 
+            Destroy(wallwin);
         Destroy(gameObject);
     }
 }
